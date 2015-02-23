@@ -1,0 +1,10 @@
+########################################
+#  lupd - last update                  #
+#  checks for last time apt-get update #
+#  was successfully run.               #
+########################################
+
+#!/bin/bash
+
+echo -n "last apt-get update: "
+ls -l /var/lib/apt/periodic/update-success-stamp | awk '{print $6" "$7" "$8}'

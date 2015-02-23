@@ -1,0 +1,9 @@
+#########################################
+#  lupg - last upgrade                  #
+#  checks for last time apt-get upgrade #
+#  was successfully run.                #
+#########################################
+#!/bin/bash
+
+echo -n "last apt-get upgrade: "
+ls -l /var/lib/apt/periodic/upgrade-stamp | awk '{print $6" "$7" "$8}'
